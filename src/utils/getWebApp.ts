@@ -1,4 +1,4 @@
-import type { WebApp } from '@twa-dev/types';
+import type { WebApp } from "@twa-dev/types";
 
 declare global {
   interface Window {
@@ -9,5 +9,5 @@ declare global {
 }
 
 export function getWebApp(): WebApp {
-  return window.Telegram.WebApp;
+  return window?.Telegram?.WebApp ?? {};
 }
